@@ -118,7 +118,7 @@ const volumeUpHandler = () => {
     const increasedVolume = videoElement.volume + 0.1
     videoElement.volume = increasedVolume;
     // console.log("increseas volume", increasedVolume);
-    const percentage = (increasedVolume * 100) + "%";
+    const percentage = Math.floor((increasedVolume) * 100) + "%";
     showToast(percentage)
 }
 
@@ -135,7 +135,7 @@ const volumeDownHandler = () => {
     }
     const decreaseVolume = videoElement.volume - 0.1;
     videoElement.volume = decreaseVolume
-    const percentage = (decreaseVolume * 100) + "%";
+    const percentage = Math.floor((decreaseVolume) * 100) + "%";
     showToast(percentage)
 }
 
